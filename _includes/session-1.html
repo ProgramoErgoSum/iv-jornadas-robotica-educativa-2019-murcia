@@ -1,0 +1,67 @@
+<section>
+    <section data-markdown>
+        # Internet de las Cosas
+
+        Programación de un **servidor web en Python** para controlar desde el móvil una serie de LEDs conectados a los pines GPIO de nuestra Raspberry Pi.
+
+        ![](images/preview.gif)
+    </section>
+    <section data-markdown>
+        ## Materiales
+
+        - Raspberry Pi con SO Raspbian
+        - Periféricos (monitor, teclado, ratón)
+        - Conexión WiFi
+        - Electrónica
+            - 3 LEDs (amarillo y verde)
+            - 3 resistencias
+            - 4 cables (macho-hembra)
+            - 1 protoboard
+    </section>
+    <section data-markdown>
+        ## Montaje
+
+        Conectamos los LEDs a los pines GPIO 17 y 18 (BCM).
+
+        ![](images/fritzing.png)
+    </section>
+    <section data-markdown>
+        ## Descargar código
+        
+        Vamos a descargar y ejecutar el código del servidor web para no tener que copiarlo.
+
+        ```sh
+        pi@raspberrypi:~ $ cd Desktop
+        pi@raspberrypi:~/Desktop $ wget https://github.com/ProgramoErgoSum/taller-iot/archive/master.zip
+        pi@raspberrypi:~/Desktop $ unzip master.zip
+        pi@raspberrypi:~/Desktop $ python3 taller-iot-master/web/index.py
+        ```
+
+    </section>
+    <section data-markdown>
+        ## Servidor web
+        
+        Vamos a probar el funcionamiento del servidor web accediendo a la dirección `localhost:8080` desde el navegador de nuestra Raspberry Pi.
+
+        ![](images/navegador.png)
+    </section>
+    <section data-markdown>
+        ## Acceder desde el móvil
+
+        Vamos a acceder a la IP de nuestra Raspberry Pi `xxx.xxx.xxx.xxx:8080` desde un dispositivo conectado a la misma red local.
+
+        ```sh
+        pi@raspberrypi:~ $ ifconfig
+        wlan0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+            inet xxx.xxx.xxx.xxx  netmask 255.255.255.0  broadcast xxx.xxx.xxx.xxx
+            ...
+        ```
+    </section>
+    <section data-markdown data-background="#ff0">
+        ## Ejercicios propuestos
+
+        - Accede desde diferentes dispositivos conectados a la misma red.
+        - Comparte tu URL con el resto de compañeros.
+        - Añade un LED de color rojo a la práctica y comprueba el correcto funcionamiento.
+    </section>
+</section>

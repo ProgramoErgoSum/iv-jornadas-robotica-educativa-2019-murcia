@@ -1,0 +1,22 @@
+# Course settings
+course:
+  link: https://github.com/programoergosum/programacion-en-python-con-raspberry-pi
+  title: IV Jornadas Robótica Educativa - IoT en Secundaria
+  description: Taller de Internet de las Cosas con Raspberry Pi para Secundaria.
+  author: 
+    name: Miguel Ángel Abellán
+    link: https://migueabellan.github.io
+  center: Facultad de Informática, Universidad de Murcia
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude:
+  - docker-compose.yml
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
