@@ -1,8 +1,8 @@
 # Course settings
 course:
   link: https://github.com/programoergosum/iv-jornadas-robotica-educativa-2019-murcia
-  title: IV Jornadas Robótica Educativa - IoT en Secundaria
-  description: Taller de Internet de las Cosas con Raspberry Pi para Secundaria.
+  title: Taller de Internet de las Cosas con Raspberry Pi para Secundaria
+  description: Taller de IoT para secundaria en las IV Jornadas Robótica Educativa.
   author: 
     name: Miguel Ángel Abellán
     link: https://migueabellan.github.io
