@@ -1,22 +1,110 @@
 <section>
     <section data-markdown>
-        # Internet de las Cosas
+        ## Internet de las Cosas
 
         Programación de un **servidor web en Python** para controlar desde el móvil una serie de LEDs conectados a los pines GPIO de nuestra Raspberry Pi.
 
         ![](images/preview.gif)
     </section>
-    <section data-markdown>
-        ## Materiales
 
-        - Raspberry Pi con SO Raspbian
-        - Periféricos (monitor, teclado, ratón)
-        - Conexión WiFi
-        - Electrónica
-            - 3 LEDs (amarillo y verde)
-            - 3 resistencias
-            - 4 cables (macho-hembra)
-            - 1 protoboard
+
+
+    <section data-markdown>
+        ### Requisitos previos
+
+        Para este taller es necesario tener instalado el [Sistema Operativo Raspbian para Raspberry Pi](https://wikitic.github.io/tutorial/raspberry_pi-raspbian-etcher/).
+
+        ![](https://raw.githubusercontent.com/wikitic/raspberry_pi-raspbian-etcher/master/preview.png)
+    </section>
+    <section data-markdown>
+        ### Conectar Raspberry Pi
+
+        1. Insertar microSD con SO Raspbian
+        2. Conectar teclado y ratón por USB
+        3. Conectar HDMI-VGA al monitor
+        4. Conectar fuente de alimentación
+
+        ![](images/materiales.png)
+    </section>
+    <section data-markdown>
+        ### Hora del sistema
+
+        En algunas versiones de Raspbian en Raspberry Pi tenemos que establecer la fecha del sistema para poder acceder a la WiFi.
+
+        > Formato del comando date: **mmddHHMMyy**
+
+        Introducir el siguiente comando con la fecha correcta en la terminal.
+
+        ```sh
+        pi@raspberrypi: ~ $ sudo date 0605170019
+        ```
+    </section>
+    <section data-markdown>
+        ### Conectar a la WiFi
+
+        Conectamos a la WiFi habilitada por la Universidad de Murcia para este taller.
+
+        SSID: **um-ROBOTICA**
+
+        PASS: **20_jorn19**
+    </section>
+
+
+
+    <section data-markdown data-background="#ff0">
+        ## Programación
+    </section>
+    <section data-markdown>
+        ### Descargar código
+        
+        Accede al navegador para descargar el código del servidor web alojado en la siguiente dirección.
+
+        ```
+        URL: http://bit.ly/TALLERIOT
+        ```
+
+        ![](images/descargar.png)
+    </section>
+    <section data-markdown>
+        ### Descomprimir código
+        
+        Descomprime en el escritorio el código descargado en el paso anterior sobre la opción **Extraer aquí**.
+
+        ![](images/descomprimir.png)
+    </section>
+    <section data-markdown>
+        ### Ejecutar el código
+        
+        Entra al directorio **web/**, doble clic sobre **index.py** y ejecuta el código sobre el botón **Run**.
+
+        ![](images/ejecutar.png)
+    </section>
+
+
+
+    <section data-markdown data-background="#ff0">
+        ## Probar servidor web
+    </section>
+    <section data-markdown>
+        ## Servidor web
+        
+        Para probar que funciona correctamente accede en el navegador a la dirección `localhost:8080`.
+
+        ![](images/navegador.png)
+    </section>
+
+
+
+    <section data-markdown data-background="#ff0">
+        ## Electrónica
+    </section>
+    <section data-markdown>
+        ### Materiales
+
+        - 2 LEDs (amarillo y verde)
+        - 2 resistencias 330Ohm
+        - 3 cables (macho-hembra)
+        - 1 protoboard
     </section>
     <section data-markdown>
         ## Montaje
@@ -25,34 +113,38 @@
 
         ![](images/fritzing.png)
     </section>
-    <section data-markdown>
-        ## Descargar código
-        
-        Vamos a descargar en el escritorio el código del servidor web.
+    
+    
 
-        ```
-        URL: http://bit.ly/TALLERIOT
-        ```
-
-        Accedemos a la descarga para descomprimirlo y ejecutarlo.
-
-        ```sh
-        pi@raspberrypi:~ $ cd Desktop
-        pi@raspberrypi:~/Desktop $ unzip web.zip
-        pi@raspberrypi:~/Desktop $ python3 web/index.py
-        ```
+    <section data-markdown data-background="#ff0">
+        ## Probar servidor web
     </section>
     <section data-markdown>
         ## Servidor web
         
-        Vamos a probar el funcionamiento del servidor web accediendo a la dirección `localhost:8080` desde el navegador de nuestra Raspberry Pi.
+        Haz clic sobre los botones "amarillo" y "verde" para comprobar que se encienden o apagan los LEDs.
 
         ![](images/navegador.png)
     </section>
-    <section data-markdown>
-        ## Acceder desde el móvil
 
-        Vamos a acceder a la IP de nuestra Raspberry Pi `xxx.xxx.xxx.xxx:8080` desde un dispositivo conectado a la misma red local.
+
+
+    <section data-markdown data-background="#ff0">
+        ## Acceder desde el móvil
+    </section>
+    <section data-markdown>
+        ### Conectar el móvil a la WiFi
+
+        Conectamos **nuestro móvil a la misma WiFi** de la Raspberry Pi (habilitada por la Universidad de Murcia para este taller).
+
+        SSID: **um-ROBOTICA**
+
+        PASS: **20_jorn19**
+    </section>
+    <section data-markdown>
+        ## Ip de la Raspberry Pi
+
+        Para conocer la IP de nuestra Raspberry Pi utilizamos el comando `ifconfig` y buscamos la interfaz `wlan`.
 
         ```sh
         pi@raspberrypi:~ $ ifconfig
@@ -61,7 +153,20 @@
             ...
         ```
     </section>
+    <section data-markdown>
+        ## Acceso desde el móvil
+        
+        Para probar que funciona correctamente accede en el navegador de tu móvil a la dirección IP `xxx.xxx.xxx.xxx:8080`.
+
+        ![](images/preview.gif)
+    </section>
+
+
+
     <section data-markdown data-background="#ff0">
+        ## Ejercicios propuestos
+    </section>
+    <section data-markdown>
         ## Ejercicios propuestos
 
         - Accede desde diferentes dispositivos conectados a la misma red.
