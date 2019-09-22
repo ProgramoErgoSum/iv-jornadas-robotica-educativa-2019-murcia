@@ -1,12 +1,6 @@
-# Course settings
-course:
-  link: https://github.com/programoergosum/iv-jornadas-robotica-educativa-2019-murcia
-  title: Taller de Internet de las Cosas con Raspberry Pi para Secundaria
-  description: Taller de IoT para secundaria en las IV Jornadas Robótica Educativa.
-  author: 
-    name: Miguel Ángel Abellán
-    link: https://migueabellan.github.io
-  center: Facultad de Informática, Universidad de Murcia
+# The MIT License (MIT)
+# Maintaned Asociación Programo Ergo Sum
+# - [@migueabellan](https://github.com/migueabellan)
 
 # Build settings
 markdown: kramdown
